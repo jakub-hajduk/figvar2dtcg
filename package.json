@@ -1,6 +1,6 @@
 {
 	"name": "figvar2dtcg",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Export Figma variables to JSON in the Design Tokens Community Group format with a flexible, extensible API.",
 	"repository": {
 		"type": "git",
