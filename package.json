@@ -8,7 +8,8 @@
 	"scripts": {
 		"build": "pkgroll",
 		"dev": "pkgroll --watch",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"lint": "biome check",
+		"fix": "biome check --fix"
 	},
 	"keywords": ["figma", "variables", "dtcg", "tokens", "format", "json"],
 	"license": "ISC",
