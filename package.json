@@ -1,0 +1,64 @@
+{
+	"name": "figvar2dtcg",
+	"version": "0.0.0",
+	"description": "Export Figma variables to JSON in the Design Tokens Community Group format with a flexible, extensible API.",
+	"author": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "pkgroll",
+		"dev": "pkgroll --watch",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": ["figma", "variables", "dtcg", "tokens", "format", "json"],
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@figma/plugin-typings": "1.107.0-beta.1",
+		"pkgroll": "^2.6.1",
+		"typescript": "^5.7.3"
+	},
+	"exports": {
+		".": {
+			"import": {
+				"default": "./dist/index.js",
+				"types": "./dist/index.d.ts"
+			},
+			"require": {
+				"default": "./dist/index.cjs",
+				"types": "./dist/index.d.cts"
+			}
+		},
+		"./value-resolvers": {
+			"import": {
+				"default": "./dist/value-resolvers.js",
+				"types": "./dist/value-resolvers.d.ts"
+			},
+			"require": {
+				"default": "./dist/value-resolvers.cjs",
+				"types": "./dist/value-resolvers.d.cts"
+			}
+		},
+		"./type-resolvers": {
+			"import": {
+				"default": "./dist/type-resolvers.js",
+				"types": "./dist/type-resolvers.d.ts"
+			},
+			"require": {
+				"default": "./dist/type-resolvers.cjs",
+				"types": "./dist/type-resolvers.d.cts"
+			}
+		},
+		"./name-resolvers": {
+			"import": {
+				"default": "./dist/name-resolvers.js",
+				"types": "./dist/name-resolvers.d.ts"
+			},
+			"require": {
+				"default": "./dist/name-resolvers.cjs",
+				"types": "./dist/name-resolvers.d.cts"
+			}
+		}
+	}
+}
