@@ -2,9 +2,18 @@
 	"name": "figvar2dtcg",
 	"version": "0.0.0",
 	"description": "Export Figma variables to JSON in the Design Tokens Community Group format with a flexible, extensible API.",
-	"author": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jakub-hajduk/figvar2dtcg"
+	},
+	"author": {
+		"name": "Jakub Hajduk",
+		"email": "devhajduk@gmail.com"
+	},
 	"type": "module",
-	"main": "index.js",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"scripts": {
 		"build": "pkgroll",
 		"dev": "pkgroll --watch",
