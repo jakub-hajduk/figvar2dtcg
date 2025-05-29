@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/jakub-hajduk/figvar2dtcg/compare/v0.0.1...v0.0.2)
+
+### 🏡 Chore
+
+- Updates ([cc185f8](https://github.com/jakub-hajduk/figvar2dtcg/commit/cc185f8))
+
+### ❤️ Contributors
+
+- Jakub Hajduk <devhajduk@gmail.com>
+
 ## v0.0.1
 
 
