@@ -21,14 +21,7 @@
 		"fix": "biome check --fix",
 		"release": "pnpm run fix && pnpm run build && changelogen --release --push --publish"
 	},
-	"keywords": [
-		"figma",
-		"variables",
-		"dtcg",
-		"tokens",
-		"format",
-		"json"
-	],
+	"keywords": ["figma", "variables", "dtcg", "tokens", "format", "json"],
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
@@ -37,6 +30,7 @@
 		"pkgroll": "^2.6.1",
 		"typescript": "^5.7.3"
 	},
+	"files": ["./dist"],
 	"exports": {
 		".": {
 			"import": {
