@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/jakub-hajduk/figvar2dtcg/compare/v0.0.2...v0.0.3)
+
+### 🩹 Fixes
+
+- **color-module:** Fix color value ([0ad62bd](https://github.com/jakub-hajduk/figvar2dtcg/commit/0ad62bd))
+- Fix color value format to match latest DTCG preview ([d09086e](https://github.com/jakub-hajduk/figvar2dtcg/commit/d09086e))
+
+### 🏡 Chore
+
+- Udpate code format ([dbefc52](https://github.com/jakub-hajduk/figvar2dtcg/commit/dbefc52))
+
+### ❤️ Contributors
+
+- Jakub Hajduk <devhajduk@gmail.com>
+
 ## v0.0.2
 
 [compare changes](https://github.com/jakub-hajduk/figvar2dtcg/compare/v0.0.1...v0.0.2)
