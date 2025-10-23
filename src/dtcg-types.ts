@@ -15,12 +15,35 @@ export interface GradientStop {
 
 export type GradientTokenValue = GradientStop[];
 
+export type ColorSpace = 'srgb'
+| 'srgb-linear'
+| 'hsl'
+| 'hwb'
+| 'lab'
+| 'lch'
+| 'oklab'
+| 'oklch'
+| 'display-p3'
+| 'a98-rgb'
+| 'prophoto-rgb'
+| 'rec2020'
+| 'xyz-d65'
+| 'xyz-d50'
+
+export type ColorComponentValue = number | 'none'
+
+
 // Color value
-export type ColorTokenValue = string;
+export type ColorTokenValue = {
+  colorSpace: ColorSpace,
+  components: [ColorComponentValue, ColorComponentValue, ColorComponentValue],
+  alpha: number,
+  hex: string
+};
 
 // Shadow value
 export interface ShadowStop {
-	color: string;
+	color: ColorTokenValue;
 	offsetX: number;
 	offsetY: number;
 	blur: number;
