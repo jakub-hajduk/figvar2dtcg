@@ -43,7 +43,7 @@ export type ColorTokenValue = {
 
 // Shadow value
 export interface ShadowStop {
-	color: string;
+	color: ColorTokenValue;
 	offsetX: number;
 	offsetY: number;
 	blur: number;

@@ -34,12 +34,12 @@ export const unknownTypeResolver: TypeResolverFn = () => true;
 
 export const defaultTypeResolvers: Record<string, TypeResolverFn> = {
 	color: colorTypeResolver,
+	dimension: dimensionTypeResolver,
 	fontFamily: fontFamilyTypeResolver,
 	fontWeight: fontWeightTypeResolver,
 	fontSize: fontSizeTypeResolver,
 	lineHeight: lineHeightTypeResolver,
 	letterSpacing: letterSpacingTypeResolver,
-	dimension: dimensionTypeResolver,
-	number: numberTypeResolver,
+	number: numberTypeResolver, // Fallback
 	unknown: unknownTypeResolver,
 };

@@ -4,6 +4,7 @@ import type {
 	DesignTokensFormat,
 } from './dtcg-types';
 import { entriesToDeepObject } from './entries-to-deep-object';
+import { defaultFilter } from './filters'
 import { defaultNameResolvers } from './name-resolvers';
 import { resolveLocalVariableValue } from './resolve-local-variable-value';
 import { resolveLocalVariableValueRecursive } from './resolve-local-variable-value-recursive';
@@ -20,6 +21,7 @@ export async function figvar2dtcg(
 	const defaultOptions: VariablesToDTCGOptions = {
 		resolveAliases: true,
 		deep: true,
+    filter: () => true,
 		typeResolvers: defaultTypeResolvers,
 		valueResolvers: defaultValueResolvers,
 		nameResolvers: defaultNameResolvers,
@@ -33,6 +35,10 @@ export async function figvar2dtcg(
 		const currentVariable =
 			await figma.variables.getVariableByIdAsync(variableId);
 		if (!currentVariable) continue;
+
+    if (opts.filter && typeof opts.filter === 'function' && !(await opts.filter(currentVariable, collection, currentMode))) {
+      continue
+    }
 
 		// Resolve type of the variable
 		let type = 'unknown';
