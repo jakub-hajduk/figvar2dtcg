@@ -4,10 +4,16 @@ export type ResolvedVariableValue = boolean | string | number | RGB | RGBA;
 
 export type MaybePromise<T> = T | Promise<T>;
 
-export type FilterFn = (variable: Variable, collection: VariableCollection, mode: {
-  modeId: string
-  name: string
-} | undefined) => MaybePromise<boolean>
+export type FilterFn = (
+	variable: Variable,
+	collection: VariableCollection,
+	mode:
+		| {
+				modeId: string;
+				name: string;
+		  }
+		| undefined,
+) => MaybePromise<boolean>;
 
 export type TypeResolverFn = (variable: Variable) => MaybePromise<boolean>;
 
@@ -46,13 +52,13 @@ export interface VariablesToDTCGOptions {
 	 * }
 	 */
 	deep: boolean;
-  /**
-   * Filter the variables.
-   * If the function returns true, the variable will be processed.
-   * If it returns false, it will be skipped.
-   * This function can be asynchronous.
-   */
-  filter: FilterFn
+	/**
+	 * Filter the variables.
+	 * If the function returns true, the variable will be processed.
+	 * If it returns false, it will be skipped.
+	 * This function can be asynchronous.
+	 */
+	filter: FilterFn;
 	/**
 	 * Custom type resolvers.
 	 * Please check out TypeResolverFn definition for more details.

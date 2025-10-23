@@ -1,5 +1,5 @@
-import type { FilterFn } from './types'
+import type { FilterFn } from './types';
 
 export const defaultFilter: FilterFn = (variable) => {
-  return !variable.name.startsWith('_') && !variable.name.startsWith('.')
-}
+	return !variable.name.startsWith('_') && !variable.name.startsWith('.');
+};

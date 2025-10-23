@@ -7,11 +7,11 @@ import type { ValueResolverFn } from './types';
 export const colorValueResolver: ValueResolverFn = (type, value) =>
 	type === 'color' && isRGBA(value)
 		? {
-        colorSpace: 'srgb',
-        components: [value.r, value.g, value.b],
-        alpha: 'a' in value ? value.a : 1,
-        hex: rgbaToHexa({ r: value.r, g: value.g, b: value.b })
-    }
+				colorSpace: 'srgb',
+				components: [value.r, value.g, value.b],
+				alpha: 'a' in value ? value.a : 1,
+				hex: rgbaToHexa({ r: value.r, g: value.g, b: value.b }),
+			}
 		: undefined;
 
 export const dimensionValueResolver: ValueResolverFn = (type, value) =>
